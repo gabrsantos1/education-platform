@@ -4,6 +4,8 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #000000;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.1292892156862745) 0%, rgba(237,237,237,0.6362920168067228) 50%, rgba(217,217,217,0.29735644257703087) 100%);
 }
 
 .header {
@@ -209,8 +211,22 @@ body {
 
 
 .textoimg {
-        font-size: 9px;  
-        line-height: 1,5;
-        color: #333;  
+    font-size: 9px;  
+    line-height: 1,5;
+    color: #333;  
+}
+
+.divimag{
+    width: 600px;
+    height: 400px;
+    float: left;
+    margin-right: 45px;
+    display: flex;
+
+}
+
+.imgt{
+    border-radius: 3%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
