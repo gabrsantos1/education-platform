@@ -1,90 +1,254 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionário - Segurança Digital</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionário - Avaliação Digital</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Segurança Digital</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="malware1.html">Malware 1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="malware2.html">Malware 2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="malware3.html">Malware 3</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="questionario.html">Questionário</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre.html">Sobre</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Tech Fortress</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="malware1.html">Cavalo de Troia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="malware2.html">Ransomware</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="malware3.html">Phishing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="simulações.html">Simulações</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="questionario.html"
+                >Questionário</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre.html">Sobre</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-    <div class="container" id="conteudo">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Questionário: Teste seus Conhecimentos sobre Malwares</h2>
-                <p>Responda as perguntas abaixo para verificar o que você aprendeu sobre malwares e como se proteger. Boa sorte!</p>
+    <div class="container center-questions" id="conteudo">
+      <div class="row">
+        <div class="col-md-12 ">
+          <h2>Questionário: Teste seus Conhecimentos sobre Malwares</h2>
+          <p>
+            Responda as perguntas abaixo para verificar o que você aprendeu
+            sobre malwares e como se proteger. Boa sorte!
+          </p>
 
-                <form action="resultado.html" method="POST">
-                    <div class="mb-3">
-                        <label for="pergunta1" class="form-label">1. O que é um malware?</label>
-                        <select class="form-select" id="pergunta1" required>
-                            <option value="">Escolha uma opção</option>
-                            <option value="A">Um software malicioso que pode prejudicar seu sistema.</option>
-                            <option value="B">Um tipo de vírus que só se espalha por e-mails.</option>
-                            <option value="C">Um programa que serve para proteger seu computador.</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="pergunta2" class="form-label">2. Como você pode se proteger contra malwares?</label>
-                        <select class="form-select" id="pergunta2" required>
-                            <option value="">Escolha uma opção</option>
-                            <option value="A">Instalando um antivírus e mantendo seu sistema atualizado.</option>
-                            <option value="B">Evitando clicar em links e anexos desconhecidos.</option>
-                            <option value="C">Ambas as alternativas anteriores.</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="pergunta3" class="form-label">3. O que é um ransomware?</label>
-                        <select class="form-select" id="pergunta3" required>
-                            <option value="">Escolha uma opção</option>
-                            <option value="A">Um malware que criptografa seus arquivos e exige pagamento para desbloqueá-los.</option>
-                            <option value="B">Um vírus que se espalha por redes sociais.</option>
-                            <option value="C">Um software que realiza tarefas automáticas no computador.</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar Respostas</button>
-                </form>
+          <form action="questionario.html" method="POST">
+            <div class="mb-3">
+              <label for="pergunta1" class="form-label"
+                >1. O que é um malware?</label
+              >
+              <select class="form-select" id="pergunta1" required>
+                <option value="">Escolha uma opção:</option>
+                <option value="A">
+                  Um software malicioso que pode prejudicar seu sistema.
+                </option>
+                <option value="B">
+                  Um tipo de vírus que só se espalha por e-mails.
+                </option>
+                <option value="C">
+                  Um programa que serve para proteger seu computador.
+                </option>
+              </select>
             </div>
+            <div class="mb-3">
+              <label for="pergunta2" class="form-label"
+                >2. Como você pode se proteger contra malwares?</label
+              >
+              <select class="form-select" id="pergunta2" required>
+                <option value="">Escolha uma opção:</option>
+                <option value="A">
+                  Instalando um antivírus e mantendo seu sistema atualizado.
+                </option>
+                <option value="B">
+                  Evitando clicar em links e anexos desconhecidos.
+                </option>
+                <option value="C">Ambas as alternativas anteriores.</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="pergunta3" class="form-label"
+                >3. O que é um ransomware?</label
+              >
+              <select class="form-select" id="pergunta3" required>
+                <option value="">Escolha uma opção:</option>
+                <option value="A">
+                  Um malware que criptografa seus arquivos e exige pagamento
+                  para desbloqueá-los.
+                </option>
+                <option value="B">
+                  Um vírus que se espalha por redes sociais.
+                </option>
+                <option value="C">
+                  Um software que realiza tarefas automáticas no computador.
+                </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="pergunta4" class="form-label"
+                >4. Como funciona um Cavalo de Troia?</label
+              >
+              <select class="form-select" id="pergunta4" required>
+                <option value="">Escolha uma opção:</option>
+                <option value="A">
+                  Ele se auto-replica, e não se espalha através de engenharia social.
+                </option>
+                <option value="B">
+                  Ele é executado quando o usuário clica em links maliciosos ou baixa programas de fontes não confiáveis.
+                </option>
+                <option value="C">
+                  Ele não se auto-replca como os vírus, nem se espalham através de engenharia social e malwares disfarçados.
+                </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="pergunta5" class="form-label"
+                >5. Como se proteger de um cavalo de troia?</label
+              >
+              <select class="form-select" id="pergunta5" required>
+                <option value="">Escolha uma opção:</option>
+                <option value="A">
+                  Evite sites desconhecidos, realize backups regularmente e não utilize antivírus.
+                </option>
+                <option value="B">
+                  Não utilize antivírus, utilize senhas fortes e únicas e tenha cuidado com downloads.
+                </option>
+                <option value="C">
+                  Mantenha seu sistema operacional atualizado, utilize senhas fortes e evite sites não seguros.
+                </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="pergunta6" class="form-label"
+                >6. Selecione a categoria de ransonware que afeta as funções do computador?</label
+              >
+              <select class="form-select" id="pergunta6" required>
+                <option value="">Escolha uma opção:</option>
+                <option value="A">
+                  Ransonware de Bloqueio.
+                </option>
+                <option value="B">
+                  Ransonware de Criptografia.
+                </option>
+                <option value="C">
+                  Ransonware Funcional.
+                </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="pergunta7" class="form-label"
+                >7. Como se proteger de pishing?</label
+              >
+              <select class="form-select" id="pergunta7" required>
+                <option value="">Escolha uma opção:</option>
+                <option value="A">
+                  Não utilizar softwares de segurança.
+                </option>
+                <option value="B">
+                  Não desconfiar de links recebidos no e-mail.
+                </option>
+                <option value="C">
+                  Não deixar de conferir erros ortográficos em sites.
+                </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="pergunta8" class="form-label"
+                >8. Como funciona o pishing?</label
+              >
+              <select class="form-select" id="pergunta8" required>
+                <option value="">Escolha uma opção:</option>
+                <option value="A">
+                  Um criminoso envia SMS's falsos para roubar informações pessoais.
+                </option>
+                <option value="B">
+                  Um criminoso tenta roubar informações pessoais através de e-mails ou sites falsos.
+                </option>
+                <option value="C">
+                  Um criminoso envia um software com códigos maliciosos.
+                </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="pergunta9" class="form-label"
+                >9. Quais os tipos de Cavalo de Troia?</label
+              >
+              <select class="form-select" id="pergunta9" required>
+                <option value="">Escolha uma opção:</option>
+                <option value="A">
+                  Backdoor, DDoS e Faking.
+                </option>
+                <option value="B">
+                  DDoS, FakeAV e Bancário.
+                </option>
+                <option value="C">
+                  Spyware, DDoS e Pishing.
+                </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="pergunta10" class="form-label"
+                >10. Qual tipo de Cavalo de Troia permite controle remoto?</label
+              >
+              <select class="form-select" id="pergunta10" required>
+                <option value="">Escolha uma opção:</option>
+                <option value="A">
+                  Backdoor.
+                </option>
+                <option value="B">
+                  FakeAV.
+                </option>
+                <option value="C">
+                  Spyware.
+                </option>
+              </select>
+            </div>
+            
+            <button type="button" onclick="verificarRespostas()" class="btn btn-primary">
+              Enviar Respostas
+            </button>
+          </form>
         </div>
+      </div>
     </div>
 
     <footer class="bg-dark text-white text-center py-4 footer">
-        <p>&copy; 2024 Segurança Digital - Todos os direitos reservados.</p>
+      <p>&copy; 2024 Tech Fortress - Todos os direitos reservados.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-</body>
+    <script src="/scripts.js"></script>
+  </body>
 </html>
