@@ -1,1 +1,1 @@
-# education-platform
+# Education Platform
