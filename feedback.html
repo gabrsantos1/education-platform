@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback - Tech Fortress</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Tech Fortress</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="malware1.html">Cavalo de Troia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="malware2.html">Ransomware</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="malware3.html">Phishing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="simulações.html">Simulações</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="questionario.html">Questionário</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobre.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="feedback.html">Feedback</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div class="brand-box"></div>
+      <div class="text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary-main">Deixe seu Feedback</span>
+          <span class="heading-primary-sub">Ajude-nos a melhorar a experiência!</span>
+        </h1>
+      </div>
+    </header>
+
+    <div id="conteudo">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2>Enviar Feedback</h2>
+                <form id="feedback-form" class="feedback-form">
+                    <div class="mb-3">
+                        <h3>Nome:</h3>
+                        <input type="text" id="author-input" class="feedback-password-name" placeholder="Digite seu nome" required />
+                    </div>
+                    <div class="mb-3">
+                        <h3>Senha:</h3>
+                        <input type="password" id="password-input" class="feedback-password-name" placeholder="Digite sua senha" required />
+                    </div>
+                    <div class="mb-3">
+                        <h3>Feedback:</h3>
+                        <textarea id="feedback-input" class="feedback-input" placeholder="Digite seu feedback..." required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <h3>Avaliação:</h3>
+                        <select id="rating-input" class="form-select" required>
+                            <option value="1">1 - Muito ruim</option>
+                            <option value="2">2 - Ruim</option>
+                            <option value="3">3 - Regular</option>
+                            <option value="4">4 - Bom</option>
+                            <option value="5">5 - Excelente</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="feedback-button">Enviar</button>
+                </form>
+    
+                <h2 class="mt-5">Feedbacks Recebidos</h2>
+                    <ul id="feedback-list" class="feedback-list">
+                        <!-- Os feedbacks recebidos serão exibidos aqui -->
+                    </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="bg-dark text-white text-center py-4 footer">
+      <p>&copy; 2024 Tech Fortress - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+      const feedbackForm = document.getElementById("feedback-form");
+      const feedbackList = document.getElementById("feedback-list");
+
+      // adicionar feedback
+      async function addFeedback(event) {
+        event.preventDefault();
+
+        const authorInput = document.getElementById("author-input");
+        const passwordInput = document.getElementById("password-input");
+        const feedbackInput = document.getElementById("feedback-input");
+        const ratingInput = document.getElementById("rating-input");
+
+        const authorName = authorInput.value.trim();
+        const password = passwordInput.value.trim();
+        const feedbackText = feedbackInput.value.trim();
+        const rating = parseInt(ratingInput.value, 10);
+
+        if (!authorName || !password || !feedbackText || !rating) {
+          alert("Por favor, preencha todos os campos.");
+          return;
+        }
+
+        const feedback = {
+          usuario_id: authorName,
+          senha: password,
+          comentario: feedbackText,
+          avaliacao: rating,
+        };
+
+        try {
+          const response = await fetch("http://localhost:3000/feedback", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(feedback),
+          });
+
+          if (response.ok) {
+            alert("Feedback enviado com sucesso!");
+            renderFeedbacks();
+            feedbackForm.reset();
+          } else {
+            alert("Erro ao enviar o feedback.");
+          }
+        } catch (error) {
+          console.error("Erro:", error);
+          alert("Erro ao se comunicar com o servidor.");
+        }
+      }
+
+// renderiza feedbacks
+async function renderFeedbacks() {
+    try {
+        const response = await fetch("http://localhost:3000/feedback");
+        const feedbacks = await response.json();
+
+        feedbackList.innerHTML = ""; // limpa a lista antes de adicionar novos feedbacks
+        feedbacks.forEach((feedback) => {
+            const feedbackItem = document.createElement("li");
+            feedbackItem.className = "feedback-item";  // Usa a classe do item de feedback no CSS
+            feedbackItem.innerHTML = `
+                <strong>${feedback.usuario_id}</strong> - Avaliação: ${feedback.avaliacao} <br>
+                ${feedback.comentario} <br>
+                <small>Enviado em: ${new Date(feedback.data_feedback).toLocaleString()}</small>
+                <div class="feedback-actions mt-2">
+                    <button class="btn btn-warning btn-sm" onclick="editFeedback(${feedback.feedback_id})">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteFeedback(${feedback.feedback_id})">Excluir</button>
+                </div>
+            `;
+            feedbackList.appendChild(feedbackItem);
+        });
+    } catch (error) {
+        console.error("Erro:", error);
+        alert("Erro ao buscar os feedbacks.");
+    }
+}
+
+
+      // editar um feedback
+      async function editFeedback(id) {
+        const password = prompt("Digite sua senha para editar:");
+
+        const feedback = await getFeedbackById(id);
+        if (password === feedback.senha) {
+          const newAuthor = prompt("Edite seu nome:", feedback.usuario_id);
+          const newText = prompt("Edite seu feedback:", feedback.comentario);
+          const newRating = prompt("Edite sua avaliação (1-5):", feedback.avaliacao);
+
+          if (newAuthor && newText && newRating >= 1 && newRating <= 5) {
+            const updatedFeedback = {
+              usuario_id: newAuthor,
+              senha: password,
+              comentario: newText,
+              avaliacao: parseInt(newRating),
+            };
+
+            const response = await fetch(`http://localhost:3000/feedback/${id}`, {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(updatedFeedback),
+            });
+
+            if (response.ok) {
+              alert("Feedback atualizado com sucesso!");
+              renderFeedbacks();
+            } else {
+              alert("Erro ao editar feedback.");
+            }
+          }
+        } else {
+          alert("Senha incorreta.");
+        }
+      }
+
+      // excluir um feedback
+      async function deleteFeedback(id) {
+        const password = prompt("Digite sua senha para excluir:");
+
+        const response = await fetch(`http://localhost:3000/feedback/${id}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ senha: password }),
+        });
+
+        if (response.ok) {
+          alert("Feedback excluído com sucesso!");
+          renderFeedbacks();
+        } else {
+          alert("Erro ao excluir feedback.");
+        }
+      }
+
+      // auxilia para obter feedback por ID
+      async function getFeedbackById(id) {
+        const response = await fetch(`http://localhost:3000/feedback/${id}`);
+        return response.json();
+      }
+
+      // lista de feedbacks ao carregar a página
+      window.onload = () => {
+        renderFeedbacks();
+        feedbackForm.addEventListener("submit", addFeedback);
+      };
+    </script>
+  </body>
+</html>
