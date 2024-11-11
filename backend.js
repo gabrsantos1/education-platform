@@ -11,7 +11,7 @@ app.use(express.json());
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '!Oupa1324',
+    password: '', // senha do seu banco de dados
     database: 'feedback_db'
 });
 
