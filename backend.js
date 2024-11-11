@@ -11,8 +11,8 @@ app.use(express.json());
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Servertester12!@',
-    database: 'feedback_db'
+    password: 'Servertester12!@', //UTILIZE A SENHA DO SEU MYSQL
+    database: 'feedback_db' //TALVEZ TENHA QUE CRIAR UM DATA BASE COM ESSE MSM NOME
 });
 
 db.connect((err) => {
