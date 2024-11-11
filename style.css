@@ -207,13 +207,6 @@ body {
   margin-bottom: 25px;
 }
 
-.espacingleft{
-  margin-left: 34%;
-  margin-right: 50%;
-  border-left: 50%;
-  margin-bottom: 25px;
-}
-
 .container {
   display: flex;
   align-items: center;
@@ -240,17 +233,83 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-.footer-down{
-  position: absolute;
-  bottom: -5px;
-  width: 100%;
+/* Estilo do container de feedback */
+.feedback-container {
+  margin-top: 2rem;
 }
 
-.center-questions{
-  background-color: rgba(33, 37, 41, 0.93);
-  padding: 20px;
-  margin-top: 25px;
-  width: 50%;
-  border-radius: 10px;
-  color:#fff
+.feedback-form {
+  margin-bottom: 20px;
 }
+
+/* Estilos para os inputs e textarea */
+.feedback-password-name, .feedback-input {
+  width: 97%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Estilos para o botão */
+.feedback-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Lista de feedbacks */
+.feedback-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;  /* Adiciona uma margem superior para separar a lista de feedbacks */
+}
+
+/* Item de feedback */
+.feedback-item {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;  /* Borda suave ao redor dos itens */
+}
+
+/* Ações dentro de cada feedback */
+.feedback-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.feedback-actions button {
+  background-color: #fff;
+  color: #007bff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Botão de editar e excluir */
+.btn-sm {
+  font-size: 0.875rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .feedback-input, .feedback-password-name {
+      width: 93%;
+  }
+
+  .feedback-button {
+      width: 100%;
+  }
+
+  .feedback-item {
+      padding: 0.75rem;
+  }
+}
+
