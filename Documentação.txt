@@ -1,0 +1,381 @@
+Estrutura do Documento
+
+HTML:
+
+<!DOCTYPE html>: Declaração de tipo de documento, informando que o conteúdo é um documento HTML5.
+<html lang="pt-BR">: Início do documento HTML, com a linguagem definida como Português (Brasil).
+<head>: Contém metadados da página, como título, codificação de caracteres, links de CSS e bibliotecas externas.
+<meta charset="UTF-8" />: Define a codificação de caracteres como UTF-8, garantindo que caracteres especiais sejam exibidos corretamente.
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />: Configuração para que a página seja responsiva, adaptando-se a diferentes tamanhos de tela.
+<title>Tech Fortress</title>: Define o título da página, exibido na aba do navegador.
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />: Link para o arquivo CSS do Bootstrap, uma biblioteca que facilita a criação de layouts responsivos e estilizados.
+<link rel="stylesheet" href="style.css" />: Link para o arquivo de estilo personalizado (style.css), que pode conter regras específicas para a aparência do site.
+Corpo do Documento (<body>)
+Barra de Navegação (Navbar)
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">: Cria uma barra de navegação responsiva com o estilo "dark" (fundo escuro) usando a classe navbar do Bootstrap.
+<a class="navbar-brand" href="index.html">Tech Fortress</a>: Define o nome da marca e o link para a página inicial.
+<button class="navbar-toggler" ...>: Botão de menu que aparece em telas menores, permitindo alternar a navegação.
+<div class="collapse navbar-collapse" id="navbarNav">: Define a lista de navegação que será oculta em telas pequenas e visível em telas grandes.
+<ul class="navbar-nav">: Lista não ordenada de itens de navegação.
+<li class="nav-item">: Cada item de navegação.
+<a class="nav-link" href="...">: Links de navegação, com a classe nav-link do Bootstrap, que define o estilo dos itens.
+Cabeçalho (<header>)
+<header class="header">: Elemento de cabeçalho que contém a introdução principal do site.
+<div class="brand-box"></div>: Caixa de marca que pode ser usada para logotipo ou outro conteúdo visual.
+<div class="text-box">: Caixa de texto contendo o título principal e o subtítulo.
+<h1 class="heading-primary">: Título principal da página, destacando a mensagem de proteção contra malwares.
+<span class="heading-primary-main">: A frase principal do título.
+<span class="heading-primary-sub">: Subtítulo explicativo.
+<a class="btn btn-white" href="#conteudo" role="button">Comece agora</a>: Botão que leva o usuário para a seção "conteúdo" da página, com a classe btn-white estilizando o botão.
+Conteúdo Principal
+<div class="container" id="conteudo">: Contêiner que envolve o conteúdo principal da página.
+<div class="row">: Define uma linha no layout, usada para dividir o conteúdo em colunas (responsivo).
+<div class="col-md-12">: Coluna que ocupa toda a largura disponível em dispositivos médios ou maiores.
+<h2>O que são malwares?</h2>: Título da seção explicando o conceito de malwares.
+<p>: Parágrafos de texto explicando o termo "malware".
+<h3>Tipos de Malware</h3>: Subtítulo que introduz uma lista de diferentes tipos de malwares.
+<ul>: Lista não ordenada de tipos de malwares, como Vírus, Cavalo de Troia, Ransomware e Phishing, com explicações sobre cada um.
+Como os Malwares Chegam
+<h3>Como os malwares chegam até você?</h3>: Seção que explica as formas comuns de infecção por malwares, com uma lista detalhada de possíveis fontes (links falsos e sites inseguros).
+Como Se Proteger
+<h3>Como se proteger?</h3>: Seção que oferece dicas para proteger o usuário contra malwares, incluindo manter o sistema atualizado, usar antivírus confiáveis e evitar clicar em links suspeitos.
+Rodapé (<footer>)
+<footer class="bg-dark text-white text-center py-4 footer">: Define o rodapé da página, com fundo escuro e texto branco.
+<p>&copy; 2024 Tech Fortress - Todos os direitos reservados.</p>: Texto de copyright.
+Scripts
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>: Inclusão do Popper.js, necessário para o funcionamento do Bootstrap (ex. para os dropdowns e popups).
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>: Inclusão do JavaScript do Bootstrap, necessário para componentes interativos como o menu.
+
+A segunda página do site segue a mesma estrutura da primeira, com o foco em explicar o que é um "Cavalo de Troia" no contexto de segurança cibernética, incluindo detalhes sobre seu funcionamento, tipos e impactos. As informações são apresentadas de forma direta, com listas e explicações sobre como se proteger contra esse tipo de malware.
+
+A terceira página do site foca em explicar o que é "Phishing" e como se proteger desse tipo de golpe cibernético. Ela segue a mesma estrutura das outras páginas, com um menu de navegação e conteúdo principal que detalha o phishing, sua definição e os métodos de proteção.
+
+A quarta página do site aborda o tema "Ransomware", explicando o que é, suas categorias, histórico, prevenção e o que fazer caso um ataque ocorra. Ela segue a mesma estrutura que as páginas anteriores, com um menu de navegação e conteúdo explicativo sobre o tipo de malware, abordando tanto aspectos técnicos quanto precauções.
+
+A quinta página, "Simulações e Prática", tem como objetivo permitir que os visitantes testem seus conhecimentos sobre segurança digital de forma interativa, oferecendo links para um questionário sobre o conteúdo aprendido e para o download de uma simulação de jogo chamada "Ciber Attack", onde os usuários podem proteger seus dispositivos contra ameaças digitais. A estrutura segue o padrão das outras páginas, com navegação e conteúdo informativo, além de um botão de ação que direciona os visitantes para as respectivas áreas de interação.
+
+A sexta página, "Questionário - Avaliação Digital", oferece um questionário interativo para que os usuários testem seus conhecimentos sobre malwares e como se proteger contra eles. As perguntas cobrem temas como ransomware, phishing, cavalos de Troia e medidas preventivas, permitindo que os usuários escolham respostas por meio de menus suspensos. A página também inclui um botão para enviar as respostas, embora a função de verificação das respostas não esteja implementada diretamente no código.
+
+A página "Sobre" visa apresentar informações detalhadas sobre o site Tech Fortress, com ênfase na missão da plataforma e na equipe responsável pela criação. A página também busca conectar o visitante com os valores do projeto, destacando os papéis dos integrantes e seus objetivos dentro da segurança digital.
+
+Estrutura e Layout
+Barra de Navegação (Navbar):
+
+O nome do site "Tech Fortress" é exibido como link na barra de navegação, e um botão de alternância (navbar-toggler) permite a visualização de links de navegação em telas menores.
+
+O layout da barra de navegação é adaptado para dispositivos móveis com a classe navbar-expand-lg, enquanto a classe navbar-dark garante contraste adequado com o fundo escuro.
+
+Seção "Sobre o Site"
+Propósito:
+
+A seção destaca a principal missão do site: educar os usuários sobre cibersegurança, abordando ameaças cibernéticas como malwares, phishing e ransomware.
+
+Apresenta um texto introdutório que explica a função do site como ferramenta de conscientização para proteger os usuários contra esses riscos.
+
+Seção "Quem Somos?"
+
+Contexto e Equipe:
+Aqui são apresentados os membros da equipe responsável pelo desenvolvimento do site, destacando suas áreas de atuação.
+
+A equipe é descrita de forma clara, destacando as habilidades de cada membro e o impacto que sua contribuição tem para o sucesso do projeto.
+
+Papéis da Equipe:
+
+Gabriel Felipe Alexandre Dos Santos: Responsável pelo desenvolvimento backend e interatividade do site.
+Giovanne Leite: Focada no design e conteúdo, com especial atenção para a experiência do usuário.
+Pedro Paulo Barbosa Arantes: Encargado pela criação e gestão do banco de dados do site.
+Design e Apresentação Visual
+
+Layout Responsivo:
+A página foi construída utilizando o grid system do Bootstrap 5, garantindo que o conteúdo seja adaptável a diferentes tamanhos de tela.
+
+Imagens de perfil: As fotos dos membros da equipe estão dispostas de forma organizada, com alinhamento feito por meio de contêineres e classes de grid.
+
+Organização de Informações: As descrições de cada membro são breves e objetivas, sendo seguidas de suas respectivas responsabilidades.
+Rodapé
+Copyright e Informações Finais:
+
+O rodapé contém a marca registrada do site ("© 2024 Tech Fortress - Todos os direitos reservados"), garantindo que a página tenha um encerramento formal e de fácil identificação.
+Scripts e Funcionalidades
+Funcionalidade da Navbar:
+
+O script do Popper.js e o arquivo JavaScript do Bootstrap são incluídos para permitir a funcionalidade da barra de navegação responsiva, garantindo que a página funcione bem em diferentes dispositivos, especialmente em telas menores.
+Considerações Finais
+
+A página "Sobre" não apenas apresenta a equipe e os objetivos do site, mas também reforça a missão educacional da plataforma. O design é clean e organizado, facilitando a navegação e a leitura.
+O uso do Bootstrap proporciona uma estrutura sólida e responsiva, enquanto a inclusão de imagens e textos sobre os membros da equipe cria uma conexão pessoal com os usuários, tornando a página mais envolvente e confiável.
+
+CSS
+
+ESTILO GERAL DO BODY:
+
+Fonte: Lato, uma fonte sans-serif, com peso 400.
+Tamanho da fonte: 16px com espaçamento entre linhas de 1.7.
+Cor do texto: Preto (#000000).
+Fundo: Um gradiente linear com transições suaves entre tons claros de cinza.
+
+ESTILO DO CABEÇALHO:
+
+Altura: 100% da altura da janela de visualização (100vh).
+Imagem de fundo: Gradiente sobreposto com uma imagem (bg.webp) e ajuste de posição para cobrir toda a área.
+Clip-path: Forma triangular recortada no fundo da seção, usando a função polygon.
+
+Estilo do brand-box e do Nome da Marca:
+
+Posição: A caixa da marca é posicionada de forma absoluta, com 40px de distância do topo e da esquerda da tela.
+Fonte da marca: Tamanho de 20px.
+
+Estilo do Texto Principal na Tela:
+
+Posição centralizada: A caixa de texto é posicionada no centro da tela, utilizando position: absolute e a técnica de transformação transform: translate(-50%, -50%).
+
+ Estilos para Títulos:
+ 
+Cor do texto: Branco (#fff).
+Transformação de texto: Convertido para maiúsculas com text-transform: uppercase.
+Espaçamento entre letras: Usado letter-spacing para aumentar a legibilidade.
+Tamanhos e pesos: Títulos principais têm fonte de 26px e peso 400, enquanto subtítulos têm fonte de 18px com peso 700.
+
+Estilo dos Botões:
+
+Estilo dos botões: Os botões têm bordas arredondadas e efeitos de transição para animação suave no hover e no estado ativo.
+Botão branco: Fundo branco com texto preto.
+Botão preto: Fundo preto com texto branco.
+
+Estilo da Barra de Navegação:
+ 
+Cor de fundo: Azul translúcido.
+Padding: 1rem vertical e 2rem horizontal.
+Sombra: Leve sombra para destacar a barra de navegação.
+Z-index: Garante que a barra de navegação fique no topo de outros elementos.
+
+Estilos para os Links de Navegação:
+
+Estilo do link: Links da barra de navegação são brancos e se transformam para azul claro (#1ebde0) com fundo translúcido quando o cursor passa por cima.
+Sombra de transição: Suave animação para mudanças de cor e fundo.
+
+Estilos de Responsividade:
+Ajustes para telas menores: A navegação é empilhada verticalmente e o espaçamento é ajustado para uma melhor visualização.
+
+Estilos para o Rodapé e Seções de Feedback:
+Rodapé fixo: O rodapé é posicionado na parte inferior da página com position: absolute.
+Seção de perguntas: Um container com fundo escuro e bordas arredondadas, com cor de texto branca.
+
+Estilos para o Feedback:
+Inputs e área de feedback: Campos de texto com largura de 97%, bordas suaves e espaçamento adequado.
+
+Este CSS aplica uma combinação de gradientes, fontes modernas e efeitos de transição para proporcionar uma interface limpa, atraente e responsiva. As regras são bem estruturadas para facilitar a manutenção e a adaptação da página a diferentes tamanhos de tela, com um foco específico em uma navegação fluída e uma experiência de usuário agradável.
+
+JavaScript
+
+
+Aqui está a documentação para o código JS:
+
+Configuração do Servidor e Banco de Dados
+O código usa o framework express para configurar um servidor web e mysql2 para conectar-se ao banco de dados MySQL.
+O servidor é executado na porta 3000, com suporte a CORS para requisições externas.
+O banco de dados MySQL é configurado com as credenciais fornecidas e utiliza o banco feedback_db.
+Rotas e Funcionalidades
+1. /create-table (GET)
+Descrição: Cria a tabela Feedback no banco de dados caso ela não exista.
+Estrutura da Tabela:
+feedback_id: ID do feedback (inteiro, auto incremento).
+usuario_id: ID do usuário que deixou o feedback (texto).
+senha: Senha do usuário (texto).
+comentario: Comentário do usuário (texto).
+avaliacao: Avaliação dada pelo usuário (inteiro entre 1 e 5).
+data_feedback: Data e hora do feedback (timestamp).
+Exemplo de resposta:
+Tabela Feedback criada com sucesso (se a criação da tabela for bem-sucedida).
+Erro ao criar tabela (se ocorrer algum erro).
+2. /feedback (POST)
+Descrição: Adiciona um novo feedback no banco de dados.
+Corpo da requisição:
+json
+{
+  "usuario_id": "id_do_usuario",
+  "senha": "senha_do_usuario",
+  "comentario": "comentário_do_feedback",
+  "avaliacao": 4
+}
+Exemplo de resposta:
+Feedback adicionado com sucesso (se o feedback for adicionado com sucesso).
+Erro ao adicionar feedback (se ocorrer algum erro).
+3. /feedback (GET)
+Descrição: Retorna todos os feedbacks ordenados pela data de criação (do mais recente para o mais antigo).
+Exemplo de resposta:
+json
+[
+  {
+    "feedback_id": 1,
+    "usuario_id": "id_do_usuario",
+    "senha": "senha_do_usuario",
+    "comentario": "comentário_do_feedback",
+    "avaliacao": 4,
+    "data_feedback": "2024-11-11T12:34:56.000Z"
+  },
+  ...
+]
+Exemplo de erro:
+Erro ao buscar feedbacks (se ocorrer algum erro na consulta).
+4. /feedback/:id (GET)
+Descrição: Retorna um feedback específico pelo seu feedback_id.
+Parâmetros:
+id: ID do feedback.
+Exemplo de resposta:
+json
+{
+  "feedback_id": 1,
+  "usuario_id": "id_do_usuario",
+  "senha": "senha_do_usuario",
+  "comentario": "comentário_do_feedback",
+  "avaliacao": 4,
+  "data_feedback": "2024-11-11T12:34:56.000Z"
+}
+Exemplo de erro:
+Feedback não encontrado (se o feedback com o ID informado não for encontrado).
+Erro ao recuperar feedback (se ocorrer algum erro na consulta).
+5. /feedback/:id (PUT)
+Descrição: Atualiza um feedback existente, verificando a senha fornecida.
+Parâmetros:
+id: ID do feedback a ser atualizado.
+Corpo da requisição:
+json
+{
+  "usuario_id": "id_do_usuario",
+  "senha": "senha_do_usuario",
+  "comentario": "novo_comentario",
+  "avaliacao": 5
+}
+Exemplo de resposta:
+Feedback atualizado com sucesso (se a atualização for bem-sucedida).
+Feedback não encontrado ou senha incorreta (se o feedback não for encontrado ou a senha estiver errada).
+Erro ao editar feedback (se ocorrer algum erro durante a atualização).
+6. /feedback/:id (DELETE)
+Descrição: Exclui um feedback existente, verificando a senha fornecida.
+Parâmetros:
+id: ID do feedback a ser excluído.
+Corpo da requisição:
+json
+{
+  "senha": "senha_do_usuario"
+}
+Exemplo de resposta:
+Feedback excluído com sucesso (se a exclusão for bem-sucedida).
+Feedback não encontrado ou senha incorreta (se o feedback não for encontrado ou a senha estiver errada).
+Erro ao excluir feedback (se ocorrer algum erro durante a exclusão).
+Execução do Servidor
+O servidor escuta na porta 3000 e imprime a mensagem Servidor rodando na porta 3000 no console.
+Considerações
+Banco de Dados: Certifique-se de que o banco de dados feedback_db exista. Caso contrário, ele pode ser criado manualmente ou o código pode ser ajustado para criá-lo automaticamente.
+Segurança: Não armazene senhas de forma simples. O ideal é utilizar técnicas de hash e salt para garantir a segurança das senhas.
+
+Função verificarRespostas
+
+A função verificarRespostas é usada para verificar as respostas de um questionário de 10 perguntas e calcular a pontuação do usuário. Ela compara as respostas selecionadas pelo usuário com as respostas corretas, fornecendo um feedback ao final.
+
+Descrição
+Objetivo: Calcular a pontuação do usuário em um questionário com 10 perguntas. Cada pergunta tem uma resposta correta predeterminada e é avaliada com base na seleção do usuário.
+Processo
+Estrutura de Respostas Corretas:
+
+Um objeto respostasCorretas armazena as respostas corretas para cada uma das perguntas (pergunta1 a pergunta10). Cada chave é o nome de uma pergunta e o valor é a alternativa correta.
+javascript
+const respostasCorretas = {
+    pergunta1: 'A',
+    pergunta2: 'C',
+    pergunta3: 'A',
+    pergunta4: 'B',
+    pergunta5: 'C',
+    pergunta6: 'A',
+    pergunta7: 'C',
+    pergunta8: 'B',
+    pergunta9: 'B',
+    pergunta10: 'A'
+};
+Inicialização da Pontuação:
+
+A variável pontuacao é inicializada como 0, e será incrementada conforme as respostas corretas forem encontradas.
+Loop para Verificação de Respostas:
+
+A função usa um loop for que itera de 1 a 10, correspondente a cada uma das perguntas.
+Para cada pergunta, o código:
+Obtém o valor selecionado pelo usuário (por meio do selectElement que pega o elemento select com o id correspondente, como pergunta1, pergunta2, etc.).
+Compara a resposta selecionada pelo usuário (respostaSelecionada) com a resposta correta armazenada em respostasCorretas.
+Se a resposta for correta, a pontuação é incrementada.
+Exibição do Resultado:
+
+Após o loop, um alert é exibido com a quantidade de perguntas corretas. O formato do alerta é:
+javascript
+alert(`Você acertou ${pontuacao} de 10 perguntas.`);
+Exemplo de Uso
+A função verificarRespostas seria acionada, por exemplo, por um botão de "Verificar respostas" que chama esta função ao ser clicado:
+
+html
+<button onclick="verificarRespostas()">Verificar Respostas</button>
+Considerações
+Seletores de Perguntas: A função assume que as perguntas são representadas por elementos select no HTML com IDs no formato pergunta1, pergunta2, etc.
+Respostas: As respostas fornecidas pelo usuário devem ser armazenadas como valores das opções do elemento select (por exemplo, value="A" para a primeira resposta correta).
+Feedback ao Usuário: O alert mostra apenas a pontuação, mas pode ser expandido para fornecer mais detalhes sobre quais respostas estavam corretas ou incorretas.
+
+SQL
+
+Descrição do SQL
+Este é um dump do MySQL para a criação e estruturação de uma tabela chamada feedback, incluindo a definição da tabela e informações sobre a estrutura do banco de dados. O dump também pode incluir dados, mas no seu caso, os dados estão vazios (não há registros de feedback exportados no dump).
+
+1. Definição da Tabela feedback
+A tabela feedback contém as seguintes colunas:
+
+feedback_id:
+
+Tipo: int
+Descrição: Identificador único para cada feedback.
+Propriedades: NOT NULL, AUTO_INCREMENT, é a chave primária da tabela.
+usuario_id:
+
+Tipo: varchar(255)
+Descrição: Identificador do usuário que forneceu o feedback.
+Propriedades: Pode ser NULL.
+senha:
+
+Tipo: varchar(255)
+Descrição: Senha associada ao feedback.
+Propriedades: Pode ser NULL.
+comentario:
+
+Tipo: text
+Descrição: O texto do feedback dado pelo usuário.
+Propriedades: Pode ser NULL.
+avaliacao:
+
+Tipo: int
+Descrição: Avaliação dada ao serviço (geralmente de 1 a 5, por exemplo).
+Propriedades: Pode ser NULL.
+data_feedback:
+
+Tipo: timestamp
+Descrição: Data e hora em que o feedback foi dado.
+Propriedades: Definido como o CURRENT_TIMESTAMP por padrão, ou seja, a data e hora do momento em que o feedback é registrado.
+Tabela de Comandos e Ações Realizadas
+DROP TABLE IF EXISTS feedback;
+
+Esse comando remove qualquer tabela chamada feedback caso ela já exista, garantindo que não ocorra erro ao tentar criar a tabela.
+CREATE TABLE feedback (...);
+
+Cria a tabela feedback com as colunas e tipos de dados já mencionados.
+Define o índice primário da tabela para a coluna feedback_id (o identificador único).
+A tabela usa o InnoDB como mecanismo de armazenamento, que oferece suporte a transações, chaves estrangeiras e bloqueios de linha.
+A codificação de caracteres utilizada é utf8mb4, que permite suportar todos os caracteres Unicode, incluindo emojis e caracteres de outras línguas.
+ALTER TABLE e ALTERações Temporárias:
+
+São realizadas alterações temporárias para otimizar a execução, como desabilitar/abilitar as chaves do banco e definir configurações de codificação e fuso horário.
+Dump de Dados (sem dados específicos aqui):
+
+O script menciona que, se houvesse dados para a tabela, o dump os exportaria, mas no seu caso, os dados estão ausentes (comentado /*!40000 ALTER TABLE feedback DISABLE KEYS */ e /*!40000 ALTER TABLE feedback ENABLE KEYS */).
+Conclusão:
+
+Finaliza o dump com o retorno do banco para as configurações originais de fuso horário e outras variáveis globais.
+Considerações e Ajustes
+Inserção de Dados: No seu dump, não há dados sendo inseridos na tabela feedback. Se você precisar de dados de exemplo, pode adicionar comandos INSERT INTO feedback (...) VALUES (...); para popular a tabela.
+Segurança: A tabela contém informações sensíveis como senha. Se for para uso real, é recomendado armazenar senhas de forma segura (com hash e salt) ao invés de texto simples.
+Este SQL serve para configurar a estrutura básica da tabela feedback, e está pronto para ser executado em um banco de dados MySQL para criar a tabela e começar a armazenar feedbacks.
