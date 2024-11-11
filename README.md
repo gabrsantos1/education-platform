@@ -25,7 +25,7 @@ Instale as dependências:
 Para executar a aplicação utilize:
 
 ```bash
-    node backend.js 
+  node backend.js 
 ```
 
 
